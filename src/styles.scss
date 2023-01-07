@@ -1,6 +1,26 @@
 $maincolor: black;
 $constrastcolor: white;
 
-body {
+@mixin white-text-black-bg {
+    color: $constrastcolor;
+    background-color: $maincolor;
+}
+
+@mixin black-test-white-bg {
     color: $maincolor;
+    background-color: $constrastcolor;
+}
+
+nav {
+    @include white-text-black-bg; 
+    display: flex;
+    justify-content: flex-start;
+
+a {
+    @include white-text-black-bg;
+    div {
+        margin: 10px;
+        font-size: large;
+    }
+}
 }
