@@ -14,8 +14,9 @@ function Index (props) {
         </Form>
   
         <h2>People</h2>
+        <div className="container">
         {people.map(person => (
-          <div key={person._id} className="person">
+          <div className="card" key={person._id}>
             <Link to={`/${person._id}`}>
               <h1>{person.name}</h1>
             </Link>
@@ -23,6 +24,7 @@ function Index (props) {
             <h3>{person.title}</h3>
           </div>
         ))}
+        </div>
       </div>
     )
   }
